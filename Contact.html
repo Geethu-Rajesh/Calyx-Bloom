@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Contact</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f1dcd5;
+    height: 100vh;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    position: fixed;
+    padding: 20px 40px;
+    width: 100%;
+    top: 0px;
+    z-index: 10;
+}
+
+.logo{
+    margin-left: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+nav{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff7f50;
+}
+
+.icons i {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 180x;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icons i:hover {
+    color: #ff7f50;
+}
+
+.icons{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: #ffffff;
+    font-size: 24px;
+    margin-right: 50px;
+}
+
+.container {
+    width: 60%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) ;
+    margin-top: 90px;
+    border-radius: 15px;
+}
+
+h2 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+hr {
+    color: #666666;
+    width: 400px;
+    margin-top: -10px;
+}
+
+p {
+    margin: 10px 0 20px;
+    color: #666666;
+}
+
+.info, .contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.info {
+    flex-direction: column;
+}
+
+.info div, .contact div {
+    margin-bottom: 15px;
+}
+
+.info div label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info div p, .contact div a {
+    color: #333;
+}
+
+.info div a {
+    text-decoration: none;
+    color: #000;
+}
+
+.infocontainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.info, .contact {
+    width: 70%;
+}
+
+.contact .group {
+    width: 100%;
+}
+
+.group {
+    width: 50%;
+}
+
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+textarea {
+    height: 100px;
+    width: 218px;
+}
+
+.sbutton {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sbutton:hover {
+    background-color: #f85c24;
+}
+
+.socials {
+    padding-right: 100px;
+}
+
+.socials a {
+    color: #666;
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #e57373;
+}
+
+.footer {
+    background-color: #fdf7f5;
+    padding: 40px 0;
+    color: #333;
+    text-align: left;
+    width: 100%;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 200px;
+    position: relative;
+}   
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 190px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-column{
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover,
+.footer-column ul li a.active {
+    color: #e57373;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #999;
+    padding-left: 155px;
+}
+
+.social-icons {
+    padding-right: 100px;
+}
+
+.social-icons a {
+    color: #666;
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e57373;
+}
+
+@media (max-width: 768px) {
+    .info, .contact {
+        flex-direction: column;
+    }
+
+    .group {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="logo">Calyx&Bloom</h2>
+        <nav>
+            <a href="Calyx.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="Shop.html">Shop</a>
+            <a href="Review.html">Reviews</a>
+            <a href="Contact.html">Contact Us</a>
+
+        </nav>
+        <div class="icons">
+            <a href=""><i class='bx bxs-heart'></i></a>
+            <a href=""><i class='bx bxs-cart'></i></a>
+            <a href=""><i class='bx bxs-user'></i></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Get In Touch With Us</h2>
+        <p>Your feedback matters! At Calyx&Bloom, we’re committed to making sure you have an exceptional experience with us. If you have any questions, concerns, or suggestions, please don’t hesitate to get in touch. Use the form below to send us a message, and we’ll respond as quickly as we can. Thank you for helping us grow and serve you better!</p>
+
+    <div class="infocontainer">
+    <div class="info">
+        <div>
+            <label>Address</label>
+            <p>Shop No. 404, Hill View Residency, Baner, Pune 412101</p>
+        </div>
+        <hr>
+        <div>
+            <label>Phone</label>
+            <p>(+91) &nbsp;7499211191</p>
+        </div>
+        <hr>
+        <div>
+            <label>Email</label>
+            <a href="mailto:geethurajesh310@gmail.com">geethurajesh310@gmail.com</a>
+        </div>
+        <hr>
+        <div class="socials"><b>Social Media 
+            <br>
+                    <a href="https://www.youtube.com"><i class='bx bxl-youtube'></i></a>
+                    <a href="https://www.instagram.com"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.facebook.com"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.pinterest.com"><i class='bx bxl-pinterest'></i></a>
+        </div>
+    </div>
+
+    <form class="Contact">
+        <div class="group">
+            <label for="name">Name <span style="color: red;">*</span></label>
+            <input type="text" id="name" placeholder="First">
+        </div>
+        <div class="group">
+            <input type="text" placeholder="Last">
+        </div>
+        <div class="group">
+            <label for="email">Email <span style="color: red;">*</span></label>
+            <input type="email" id="email">
+        </div>
+        <div class="group" style="width: 100%;">
+            <label for="message">Comment or Message</label>
+            <textarea id="message"></textarea>
+        </div>
+        <button type="submit" class="sbutton">Submit</button>
+    </form>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Calyx&Bloom</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    position: fixed;
+    padding: 20px 40px;
+    width: 100%;
+    top: 0px;
+    z-index: 10;
+}
+
+.logo{
+    margin-left: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+nav{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff7f50;
+}
+
+.icons i {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 180x;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icons i:hover {
+    color: #ff7f50;
+}
+
+.icons{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: #ffffff;
+    font-size: 24px;
+    margin-right: 50px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f1dcd5;
+    margin-top: 70px;
+}
+
+.testimonials {
+    max-width: 1000px;
+    height: 500px;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+}
+
+.heading h3 {
+    font-size: 14px;
+    color: #e57373;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.heading h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.heading p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: #f9f3f1;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.testimonial p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.profile h4 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.profile p {
+    font-size: 14px;
+    color: #888;
+}
+
+.footer {
+    background-color: #fdf7f5;
+    padding: 40px 0;
+    color: #333;
+    text-align: left;
+    width: 100%;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 200px;
+    position: relative;
+}   
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 190px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-column{
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover,
+.footer-column ul li a.active {
+    color: #e57373;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #999;
+    padding-left: 155px;
+}
+
+.social-icons {
+    padding-right: 100px;
+}
+
+.social-icons a {
+    color: #666;
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e57373;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="logo">Calyx&Bloom</h2>
+        <nav>
+            <a href="Calyx.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="Shop.html">Shop</a>
+            <a href="Review.html">Reviews</a>
+            <a href="Contact.html">Contact Us</a>
+
+        </nav>
+        <div class="icons">
+            <a href=""><i class='bx bxs-heart'></i></a>
+            <a href=""><i class='bx bxs-cart'></i></a>
+            <a href=""><i class='bx bxs-user'></i></a>
+        </div>
+    </header>
+<section class="testimonials">
+    <div class="heading">
+        <h3>TESTIMONIAL</h3>
+        <h2>Hear From Our Happy Customers</h2>
+        <p>At Calyx&Bloom, we believe in the beauty of every bloom and the joy it brings to our customers. Don't just take our word for it—read what our lovely patrons have to say about their experiences with us!</p>
+    </div>
+    <div class="container">
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"I've been a loyal customer, and they never cease to amaze me. Stunning bouquets every time!  The flowers are always fresh, the arrangements are stunning, and the service is top-notch."</p>
+            <div class="profile">
+                <img src="Screenshot 2024-11-15 233343.png" alt="Alex Volkov">
+                <div>
+                    <h4>Alex Volkov</h4>
+                    <p>Wedding Planner</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"Absolutely love this flower shop! The arrangements are always breathtaking, and the flowers stay fresh for days. The flowers were fresh, the colors were perfect, and the delivery was right on time."</p>
+            <div class="profile">
+                <img src="Screenshot 2024-11-15 232731.png" alt="Rhys Larsen">
+                <div>
+                    <h4>Ava Chen</h4>
+                    <p>Designer</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"I recently used Florist for my daughter's wedding, and I couldn't have been happier with the results. The wedding florals were breathtaking, and the team went above and beyond to bring."</p>
+            <div class="profile">
+                <img src="Screenshot 2024-11-15 233253.png" alt="Ava Chen">
+                <div>
+                    <h4>Rhys Larsen</h4>
+                    <p>Business Owner</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Flower Shop</h3>
+            <p>Welcome to the world of Florist, where flowers come to life with love and creativity. Discover our story, our passion for flowers, and our commitment to making every moment memorable.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Links</h3>
+            <ul>
+                <li><a href="Calyx.html">Home</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Review.html" class="active">Reviews</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <p>Address: Shop No. 404, Hill View Residency, Baner, Pune 412101</p>
+            <p>Email: geethurajesh310@gmail.com</p>
+            <p>Phone: (+91) &nbsp;7499211191</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright © 2024 Calyx&Bloom</p>
+        <div class="social-icons">
+            <a href="https://www.youtube.com"><i class='bx bxl-youtube'></i></a>
+            <a href="https://www.instagram.com"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.facebook.com"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.pinterest.com"><i class='bx bxl-pinterest'></i></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <title>Shop</title>
+    <style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body{
+    background-color: #f1dcd5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    position: fixed;
+    padding: 20px 40px;
+    width: 100%;
+    top: 0px;
+    z-index: 10;
+}
+
+.logo{
+    margin-left: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+nav{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff7f50;
+}
+
+.icons i {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 180x;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icons i:hover {
+    color: #ff7f50;
+}
+
+.icons{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: #ffffff;
+    font-size: 24px;
+    margin-right: 50px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 80px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.shopping {
+    text-align: start;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.shopping h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.shoping hr {
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.shopping p{
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #555;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.products{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productbox{
+    background-color: #f9f9f9;
+    width: 300px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.productflower{
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.productflower img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.sale{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffffff;
+    color: #3a0d0d;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    margin-bottom: 0px;
+    color: #333;
+}
+.category {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.price{
+    font-size: 16px;
+    color: #333;
+}
+
+.oldprice{
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 5px;
+}
+
+.footer {
+    background-color: #fdf7f5;
+    padding: 40px 0;
+    color: #333;
+    text-align: left;
+    width: 100%;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 200px;
+    position: relative;
+}   
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 190px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-column{
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 0;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover,
+.footer-column ul li a.active {
+    color: #e57373;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #999;
+    padding-left: 155px;
+}
+
+.social-icons {
+    padding-right: 100px;
+}
+
+.social-icons a {
+    color: #666;
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e57373;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="logo">Calyx&Bloom</h2>
+        <nav>
+            <a href="Calyx.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="Shop.html">Shop</a>
+            <a href="Review.html">Reviews</a>
+            <a href="Contact.html">Contact Us</a>
+
+        </nav>
+        <div class="icons">
+            <a href=""><i class='bx bxs-heart'></i></a>
+            <a href=""><i class='bx bxs-cart'></i></a>
+            <a href=""><i class='bx bxs-user'></i></a>
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <div class="shopping">
+            <h2>Shop</h2>
+            <hr>
+            <p>Showing all 9 results</p>
+            <div class="products">
+            
+            <div class="productbox">
+                <div class="productflower">
+                    <img src="Custom.png" alt="Image">
+                </div>
+                <div class="product-info">
+                    <p class="category">Flower</p>
+                    <h3>Custom Floral Designs</h3>
+                    <p class="price">$29.00</p>
+                </div>
+            </div>
+
+            <div class="productbox">
+                <div class="productflower">
+                    <span class="sale">Sale!</span>
+                    <img src="Periwinkle Flower.png" alt="Image">
+                </div>
+                <div class="product-info">
+                    <p class="category">Bouquet</p>
+                    <h3>Periwinkle Flower</h3>
+                    <p class="price"><span class="oldprice">$239.00</span> $199.00</p>
+                </div>
+            </div>
+
+            <div class="productbox">
+                <div class="productflower">
+                    <span class="sale">Sale!</span>
+                    <img src="Periwinkle Flower Bouquet.png" alt="Image">
+                </div>
+                <div class="product-info">
+                    <p class="category">Bouquet</p>
+                    <h3>Periwinkle Flowers Bouquet</h3>
+                    <p class="price"><span class="oldprice">$79.00</span> $56.00</p>
+                </div>
+            </div>
+
+            <div class="productbox">
+                <div class="productflower">
+                    <span class="sale">Sale!</span>
+                    <img src="Rose Flower Bouquet.png" alt="Image">
+                </div>
+                <div class="product-info">
+                    <p class="category">Bouquet</p>
+                    <h3>Rose Flower Bouquet</h3>
+                    <p class="price"><span class="oldprice">$210.00</span> $199.00</p>
+                </div>
+            </div>
+
+            <div class="productbox">
+                <div class="productflower">
+                    <span class="sale">Sale!</span>
+                    <img src="Tulip Custom Flower.png" alt="Image">
+                </div>
+                <div class="product-info">
+                    <p class="category">Bouquet</p>
+                    <h3>Tulip Custom Flower</h3>
+                    <p class="price"><span class="oldprice">$159.00</span> $129.00</p>
+                </div>
+            </div>
+
+            <div class="productbox">
+                <div class="productflower">
+                    <span class="sale">Sale!</span>
+                    <img src="Tulip Flower.png" alt="Image">
+                </div>
+                <div class="product-info">
+                    <p class="category">Bouquet</p>
+                    <h3>Tulip Flower</h3>
+                    <p class="price"><span class="oldprice">$129.00</span> $99.00</p>
+                </div>
+            </div>
+
+            <div class="productbox">
+                <div class="productflower">
+                    <span class="sale">Sale!</span>
+                    <img src="Wedding Flower Bouquet.png" alt="Image">
+                </div>
+                <div class="product-info">
+                    <p class="category">Bouquet</p>
+                    <h3>Wedding Flower Bouquet</h3>
+                    <p class="price"><span class="oldprice">$319.00</span> $299.00</p>
+                </div>
+            </div>
+
+            <div class="productbox">
+                <div class="productflower">
+                    <span class="sale">Sale!</span>
+                    <img src="White Flower Bouquet.png" alt="Image">
+                </div>
+                <div class="product-info">
+                    <p class="category">Bouquet</p>
+                    <h3>White Flower Bouquet</h3>
+                    <p class="price"><span class="oldprice">$229.00</span> $199.00</p>
+                </div>
+            </div>
+
+            <div class="productbox">
+                <div class="productflower">
+                    <span class="sale">Sale!</span>
+                    <img src="Winkle Flower Bouquet.png" alt="Image">
+                </div>
+                <div class="product-info">
+                    <p class="category">Bouquet</p>
+                    <h3>Winkle Flower Bouquet</h3>
+                    <p class="price"><span class="oldprice">$99.00</span> $67.00</p>
+                </div>
+            </div>
+               
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Calyx&Bloom</h3>
+                <p>Welcome to the world of Florist, where flowers come to life with love and creativity. Discover our story, our passion for flowers, and our commitment to making every moment memorable.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="Calyx.html">Home</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Shop.html" class="active">Shop</a></li>
+                    <li><a href="Review.html">Reviews</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Address: Shop No. 404, Hill View Residency, Baner, Pune 412101</p>
+                <p>Email: geethurajesh310@gmail.com</p>
+                <p>Phone: (+91) &nbsp;7499211191</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2024 Calyx&Bloom</p>
+            <div class="social-icons">
+                <a href="https://www.youtube.com"><i class='bx bxl-youtube'></i></a>
+                <a href="https://www.instagram.com"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.facebook.com"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.pinterest.com"><i class='bx bxl-pinterest'></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
